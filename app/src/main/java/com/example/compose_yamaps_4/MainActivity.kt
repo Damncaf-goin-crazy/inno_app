@@ -115,8 +115,7 @@ private fun moveToStartLocation(mapView: MapView) {
     val zoomValue = 16.5f
     mapView.map.move(
         CameraPosition(startLocation, zoomValue, 0.0f, 0.0f),
-        Animation(Animation.Type.SMOOTH, 2f),
-        null
+
     )
 }
 
@@ -221,10 +220,10 @@ private fun drawCustomPolygon(mapView: MapView) {
     val mapObjects: MapObjectCollection = mapView.map.mapObjects.addCollection()
      // Create a large polygon that covers the entire map area
      val outerBoundaryCoordinates = listOf(
-         Point(90.0, -180.0), // Top-left corner of the world
-         Point(90.0, 180.0),  // Top-right corner of the world
-         Point(-90.0, 180.0), // Bottom-right corner of the world
-         Point(-90.0, -180.0) // Bottom-left corner of the world
+         Point(89.0, -170.0), // Top-left corner of the world
+         Point(89.0, 170.0),  // Top-right corner of the world
+         Point(-89.0, 170.0), // Bottom-right corner of the world
+         Point(-89.0, -170.0) // Bottom-left corner of the world
      )
 
      val polygon = Polygon(LinearRing(outerBoundaryCoordinates), listOf(LinearRing(coordinates)))
